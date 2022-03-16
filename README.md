@@ -10,9 +10,9 @@ web3 contract build counter.sol
 web3 contract deploy Counter.bin
 # copy returned address then
 export WEB3_ADDRESS=0xADDRESS
-web3 contract call --abi Counter.abi --wait --function counter
+web3 contract call --abi Counter.abi.json --wait --function counter
 # should be zero
-web3 contract call --abi Counter.abi --wait --function increment
+web3 contract call --abi Counter.abi.json --wait --function increment
 # now should return 1!
 ```
 
